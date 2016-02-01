@@ -20,8 +20,9 @@ angular.module('starter.controllers', [])
     })
 })
 
-.controller('ParkDetailCtrl', function ($scope, $stateParams, $log) {
+.controller('ParkDetailCtrl', function ($scope, $stateParams, $log, ParkData) {
   $log.info('ParkDetailCtrl created');
+  $scope.park = ParkData.getPark($stateParams.parkId);
 })
 
 .controller('MapCtrl', function ($scope, $log) {
