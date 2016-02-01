@@ -27,4 +27,12 @@ angular.module('starter.controllers', [])
 
 .controller('MapCtrl', function ($scope, $log) {
   $log.info('MapCtrl created');
+
+  // define map center 
+  // geographic center of US and zoom 3 to view most of US
+  $scope.mapCenter = {
+    lat: 39.833,
+    lng: -98.583,
+    zoom: 3
+  }
 });

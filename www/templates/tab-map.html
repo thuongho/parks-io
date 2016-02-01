@@ -1,9 +1,6 @@
-<ion-view view-title="Account">
-  <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
+<ion-view view-title="Map">
+  <!-- override ionic tap event to work properly with the map -->
+  <ion-content data-tap-disabled="true">
+    <leaflet defaults="map.defaults" center="mapCenter" markers="markers" class="leafletMap"></leaflet>
   </ion-content>
 </ion-view>
