@@ -42,30 +42,38 @@ angular.module('starter', ['ionic', 'leaflet-directive', 'starter.controllers', 
 
 
   .state('tab.parks', {
-      url: '/parks',
-      views: {
-        'tab-parks': {
-          templateUrl: 'templates/tab-parks.html',
-          controller: 'ParksCtrl'
-        }
+    url: '/parks',
+    views: {
+      'tab-parks': {
+        templateUrl: 'templates/tab-parks.html',
+        controller: 'ParksCtrl'
       }
-    })
-    .state('tab.park-detail', {
-      url: '/parks/:parkId',
-      views: {
-        'tab-parks': {
-          templateUrl: 'templates/park-detail.html',
-          controller: 'ParkDetailCtrl'
-        }
+    }
+  })
+  .state('tab.park-detail', {
+    url: '/parks/:parkId',
+    views: {
+      'tab-parks': {
+        templateUrl: 'templates/park-detail.html',
+        controller: 'ParkDetailCtrl'
       }
-    })
-
+    }
+  })
   .state('tab.map', {
     url: '/map',
     views: {
       'tab-map': {
         templateUrl: 'templates/tab-map.html',
         controller: 'MapCtrl'
+      }
+    }
+  })
+  .state('tab.map-details', {
+    url: '/parks/:parkId',
+    views: {
+      'tab-map': {
+        templateUrl: 'templates/park-detail.html',
+        controller: 'ParkDetailCtrl'
       }
     }
   });
