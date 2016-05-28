@@ -36,6 +36,13 @@ angular.module('starter.controllers', [])
     zoom: 3
   }
 
+  $scope.map = {
+    defaults: {
+      tileLayer: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+      maxZoom: 18
+    }
+  };
+
   var theParksData = ParkData.getParks();
   var markerArray = [];
 
